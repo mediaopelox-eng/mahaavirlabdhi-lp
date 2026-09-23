@@ -1,0 +1,1406 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <link rel="icon" href="assets/images/icons/favicon.ico" type="image/png" sizes="16x16" />
+    <title>Mahaavir Labdhi</title>
+
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- swiper cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- AOS cdn -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Include Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- FancyBox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+    <!-- lenis cdn -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css" />
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <style>
+        .success-card {
+            text-align: center;
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #dff5e5;
+            color: #16a34a;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .success-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin-bottom: 12px;
+            font-family: "Playfair Display", serif;
+        }
+
+        .success-text {
+            font-size: 18px;
+            color: #000;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .btn-back {
+            background: var(--gold-dark);
+            color: #fff;
+            border: none;
+            padding: .7rem 2rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            transition: background .2s, transform .15s;
+        }
+        .modal-body {
+            position: relative;
+            flex: 1 1 auto;
+            padding: 30px 20px;
+        }
+        .section-overview .section-heading::before, .section-about .section-heading::before {
+            margin: 0 auto 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header-container" id="header">
+        <nav class="navbar-container">
+            <div class="logo">
+                <div class="logo-img-1">
+                    <img src="assets/images/logo/logo.svg" alt="" />
+                </div>
+            </div>
+
+            <div class="navLinks">
+                            <a href="#overview" data-section="overview"
+                    class="navLink">Overview</a>
+                            <a href="#highlight" data-section="highlight"
+                    class="navLink">Highlight</a>
+                            <a href="#configuration" data-section="configuration"
+                    class="navLink">Configuration</a>
+                            <a href="#gallery" data-section="gallery"
+                    class="navLink">Gallery</a>
+                            <a href="#location" data-section="location"
+                    class="navLink">Location</a>
+                            <a href="#about" data-section="about"
+                    class="navLink">About Us</a>
+                        </div>
+
+            <!-- <div class="menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample">
+                <img src="assets/images/icons/menu.svg" alt="menu" />
+            </div> -->
+
+            <!-- <div class="primary-button custom-visible" data-bs-toggle="modal" data-bs-target="#mainModalPopup"
+                onclick="trackForm('Contact Form')">
+                <button class="btnPrimary">
+                    Contact Us
+                </button>
+            </div> -->
+        </nav>
+    </header>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <div class="offcanvas-logo">
+                <div class="logo-img">
+                    <img src="assets/images/logo/logo.svg" alt="" />
+                </div>
+            </div>
+
+            <div class="offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="offcanvas-body">
+            <div class="offcanvas-links">
+                                        <a href="#overview" data-section="overview"
+                    class="offcanvas-link" data-bs-dismiss="offcanvas">Overview</a>
+                            <div class="line"></div>            <a href="#highlight" data-section="highlight"
+                    class="offcanvas-link" data-bs-dismiss="offcanvas">Highlight</a>
+                            <div class="line"></div>            <a href="#configuration" data-section="configuration"
+                    class="offcanvas-link" data-bs-dismiss="offcanvas">Configuration</a>
+                            <div class="line"></div>            <a href="#gallery" data-section="gallery"
+                    class="offcanvas-link" data-bs-dismiss="offcanvas">Gallery</a>
+                            <div class="line"></div>            <a href="#location" data-section="location"
+                    class="offcanvas-link" data-bs-dismiss="offcanvas">Location</a>
+                            <div class="line"></div>            <a href="#about" data-section="about"
+                    class="offcanvas-link" data-bs-dismiss="offcanvas">About Us</a>
+                        </div>
+        </div>
+    </div>
+    <!-- header -->
+
+    <main>
+        <!-- BANNER -->
+        <section class="main-banner">
+            <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="banner-wrap">
+                            <img src="assets/images/banner/w1.webp" class="banner-img d-none d-md-block"
+                                alt="" />
+                            <img src="assets/images/banner/m1.webp" class="banner-img d-block d-md-none"
+                                alt="" />
+                            <!-- <div class="banner-overlay"></div>
+                            <div class="banner-text-wrap">
+                                <div class="banner-text-inner">
+                                    <h1 class="banner-heading">
+                                        North India's<br>Premium<br>
+                                        <span class="banner-heading-italic">Business Destination</span>
+                                    </h1>
+                                    <p class="banner-tagline">Punjab 4.0 &mdash; Where a New Version of<br>Growth
+                                        Unfolds</p>
+                                    <p class="banner-location">SECTOR 75, MOHALI, PUNJAB</p>
+                                    <button class="banner-cta" data-bs-toggle="modal" data-bs-target="#mainModalPopup"
+                                        onclick="trackForm('Banner Form')">
+                                        Book a Visit &nbsp;&rarr;
+                                    </button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> -->
+            </div>
+            <!-- USP Strip on banner -->
+            <!-- <div class="banner-usp-strip">
+                <div class="banner-usp-row">
+                    <div class="banner-usp">
+                        <span class="usp-value">~15</span>
+                        <span class="usp-label">Acre Land Parcel</span>
+                    </div>
+                    <div class="banner-usp">
+                        <span class="usp-value">5M+</span>
+                        <span class="usp-label">Sq. Ft. Built-up</span>
+                    </div>
+                    <div class="banner-usp">
+                        <span class="usp-value">15</span>
+                        <span class="usp-label">Storeys</span>
+                    </div>
+                    <div class="banner-usp">
+                        <span class="usp-value">1000+</span>
+                        <span class="usp-label">Ft. Frontage</span>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <!-- OVERVIEW -->
+        <section class="section-overview texture-pattern" id="overview" style="text-align: center !important;">
+            <div class="custom-container">
+                <div class="row g-5 align-items-center flex-column-reverse flex-lg-row">
+
+                    <!-- Left: Text Content -->
+                    <div class="col-lg-8 offset-lg-2">
+
+                        <div class="section-heading">
+                            <h2 class="section-title text-start aos-init aos-animate" data-aos="fade-up"
+                                data-aos-delay="60" data-aos-duration="1500" data-aos-easing="ease" style="text-align: center !important;">
+                                Overview
+                            </h2>
+                            <h4 class="section-subtitle text-start mt-2 mb-3 aos-init aos-animate" data-aos="fade-up"
+                                data-aos-delay="60" data-aos-duration="1500" data-aos-easing="ease" style="text-align: center !important;">
+                                Mahaavir Labdhi
+                            </h4>
+                        </div>
+
+
+
+                        <div class="overview-desc-wrapper">
+                            <p class="ov-desc" data-aos="fade-up" data-aos-delay="150" data-aos-duration="900">
+                                <strong>A Serene Sea-Facing Residential Landmark Rising Across 6.5 Acres in Uran, Navi Mumbai.</strong><br>
+                                Mahaavir Labdhi is primely positioned in Uran’s most prestigious growth corridor, offering uninterrupted panoramic views of the Arabian Sea. Designed for those who seek refined living amidst nature's grandeur, this majestic gated enclave features high-rise premium towers, the largest podium garden in the region, and world-class club life leisures. From meticulously planned 2 & 3 BHK luxury residences to seamless connectivity via the Atal Setu, Mahaavir Labdhi brings you a lifestyle where elite architecture meets absolute serenity.
+                            </p>
+                        </div>
+
+                        <div class="overview-links pt-2" data-aos="fade-up" data-aos-delay="300"
+                            data-aos-duration="900" style="justify-content: center !important;">
+                            <button class="btn-ov-brochure" data-bs-toggle="modal" data-bs-target="#mainModalPopup">
+                                <span class="btn-ov-icon">
+                                    <img src="assets/images/icons/download.svg" loading="lazy" alt="download" />
+                                </span>
+                                <span> Enquire Now</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHLIGHTS -->
+        <section class="section-highlights" id="highlight">
+            <div class="highlights-section-inner">
+
+
+                <div class="section-heading">
+                    <h2 class="section-title text-center" data-aos="fade-up" data-aos-delay="60"
+                        data-aos-duration="1500" data-aos-easing="ease">
+                        Highlights
+                    </h2>
+                    <h4 class="section-subtitle text-center mt-2" data-aos="fade-up" data-aos-delay="60"
+                        data-aos-duration="1500" data-aos-easing="ease">
+                        Landmark Features for Elevated Living
+                    </h4>
+                </div>
+
+                <div class="highlights-carousel-wrap mt-5" data-aos="fade-up" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <div class="owl-carousel highlights-carousel">
+
+                        <div class="item">
+                            <div class="box">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M220-97.69v-60h230v-174.62h-90q-74.92 0-127.46-52.54Q180-437.38 180-512.31q0-56.54 33.77-102.23 33.77-45.69 86.69-67.92 8.62-76.92 58.77-123.38 50.16-46.47 120.77-46.47t120.77 46.47q50.15 46.46 58.77 123.38 53.3 21.46 86.88 67.54Q780-568.85 780-512.31q0 74.93-52.54 127.46-52.54 52.54-127.46 52.54h-90v174.62h230v60H220Zm140-294.62h240q50 0 85-35t35-85q0-38.69-23.77-69.27-23.77-30.57-60.23-45.34l-32-13.39-4.46-36q-6.39-53.84-39.31-84.92T480-792.31q-47.31 0-80.23 31.08t-39.31 84.92l-4.46 36-35.08 14.93Q286-610.61 263-580.42t-23 68.11q0 50 35 85t85 35Zm120-200Z"/></svg>
+                                </div>
+                                <h4 class="text">6.5 Acres Community Living</h4>
+                                <p class="sub-text">An expansive residential township designed with vast open spaces and supreme tranquility in Uran.</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="box">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M90-130.77v-60q33.39-1.15 61.46-14.5 28.08-13.34 61.54-37.42 30.77 24.23 65.88 37.96Q314-191 347-191q33.38 0 69.19-13.23Q452-217.46 481-241.92q31.62 26.07 65.42 38.5Q580.23-191 615-191q33.77 0 65.08-12.23 31.3-12.23 68.92-39.46 35.15 26.15 63.23 38.27 28.08 12.11 57.77 13.65v60q-30.77-1.15-60.77-10.65-30-9.5-60.23-27.12-32.77 20-67.08 29.27Q647.62-130 615-130q-32.62 0-67.12-9.46-34.5-9.46-67.26-29.46-29.77 19.38-64.39 29.15Q381.62-130 347-130q-33.23 0-67.23-9.58-34-9.57-66.77-28.96-29.08 16.85-60.27 26.54-31.19 9.69-62.73 11.23Zm0-160V-380q0-93.54 36.15-174.08 36.16-80.53 99.43-139.65 63.27-59.11 149.23-92.69Q460.77-820 560-820q28.77 0 57.04 2.73t51.19 7.58q-18.31 30.46-28.27 63.84Q630-712.46 630-683q0 59.23 41.88 101.12Q713.77-540 773-540h97v60h-97q-84.77 0-143.88-59.12Q570-598.23 570-683q0-17.46 3.35-37.19 3.34-19.73 8.88-36.66-84.38 17.23-138.31 80.16Q390-613.77 390-529.61q0 42.53 12.27 79.65 12.27 37.12 37.5 73.42 9.15-5 19.69-12.27 10.54-7.26 20.92-14.26 29.77 24.84 67 38.46Q584.62-351 615-351q30 0 66.42-13.92 36.43-13.92 67.58-38.15 30.85 22.46 60.23 36.61 29.38 14.15 60.77 15.69v60q-29.62-1.15-59.42-10.84-29.81-9.7-61.58-28.08-33.54 20.77-66.73 30.23Q649.08-290 615-290q-33.31 0-69.5-10.77T481-329.69q-34.46 21.31-66.73 30.19Q382-290.61 347-290q-35 .62-67.65-9-32.66-9.61-66.35-29.54-29.08 16.85-60.27 26.54-31.19 9.69-62.73 11.23ZM345-351q9.62 0 19.23-.96 9.62-.96 16.93-3.11-26.24-41.93-38.7-84.24-12.46-42.3-12.46-90.3 0-86 43.54-153.24Q417.08-750.08 495-788.23v34.38q-73.15 10.62-135.08 41.96Q298-680.54 252.54-633q-45.46 47.54-72.16 108.85-26.69 61.3-29.77 131.84v25.39q16.93-7.08 31.97-15.23 15.04-8.16 30.42-19.77 36.23 26.23 66.42 38.58Q309.62-351 345-351Zm-55-191.08Z"/></svg>
+                                </div>
+                                <h4 class="text">Serene Sea-Facing Homes</h4>
+                                <p class="sub-text">Uninterrupted, breathtaking panoramic views of the Arabian Sea right from your private window.</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="box">
+                                <div class="icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <path d="M9 12l2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text">RERA Approved Project</h4>
+                                <p class="sub-text">MahaRERA No.: P52000045246 — complete transparency and peace of mind for every homebuyer</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="box">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M110.77-190.77v-60h212.31Q303-329.23 246.12-386.12 189.23-443 110.77-463.08q18.46-4.61 36.42-6.92 17.97-2.31 37.43-2.31 123.61 0 209.5 78.96Q480-314.39 480-190.77H110.77Zm429.23 0q0-31.23-6.12-63.12-6.11-31.88-18.5-61.8 37.39-67.92 104.7-112.27 67.3-44.35 155.3-44.35 19.46 0 37.43 2.31 17.96 2.31 36.42 6.92-78.46 20.08-134.85 76.96-56.38 56.89-77.46 135.35h212.31v60H540Zm-55.38-182.84q-4.24-65 15.53-121.62 19.77-56.61 57.93-99.54 38.15-42.92 91.57-69.11 53.43-26.19 115.5-28.96-59.84 37.69-98 90.03-38.15 52.35-56.54 111.89-38.23 19.08-72.03 50.92-33.81 31.85-53.96 66.39Zm-56.46-65q-12.77-13.23-29-25.85-16.24-12.62-33.47-21.77 1.16-7.15 2.35-16.35 1.19-9.19 1.19-17.88 0-70.23-22.27-132.85-22.27-62.61-62.8-114.38 63.3 25.85 111.23 77.69 47.92 51.85 70.46 124-15.31 28.46-24.85 61.77-9.54 33.31-12.84 65.62Z"/></svg>
+                                </div>
+                                <h4 class="text">Largest Podium Garden</h4>
+                                <p class="sub-text">Exclusive podium-level landscaping, recreational zones, and leisure amenities like nowhere else</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="box">
+                                <div class="icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                </div>
+                                <h4 class="text">Grand Entrance Lobby</h4>
+                                <p class="sub-text">A magnificent, aesthetically designed arrival experience that sets the tone for luxury living.</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="box">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M162.12-82.12Q130-114.23 130-160q0-45.77 32.12-77.88Q194.23-270 240-270q12.85 0 25.23 3.19 12.39 3.2 23.39 8.58l79.3-98.69q-24.92-27.16-34.38-60.77-9.46-33.62-3.85-67.62l-115.23-38.15q-15.08 24.23-39.73 38.84Q150.08-470 120-470q-45.77 0-77.88-32.12Q10-534.23 10-580q0-45.77 32.12-77.88Q74.23-690 120-690q45.77 0 77.88 32.12Q230-625.77 230-580q0 3.54-.19 5.92-.2 2.39-.2 4.77l114.85 39.93Q361-560 389.89-581.92q28.88-21.92 66.26-28.15v-122.78q-38.61-9.07-62.38-39.04Q370-801.85 370-840q0-45.77 32.12-77.88Q434.23-950 480-950q45.77 0 77.88 32.12Q590-885.77 590-840q0 38.15-24.08 68.11-24.07 29.97-62.07 39.04v122.78q37.38 6.23 66.07 28.15 28.69 21.92 45.62 52.54l114.85-39.93q-.39-2.77-.39-4.96V-580q0-45.77 32.12-77.88Q794.23-690 840-690q45.77 0 77.88 32.12Q950-625.77 950-580q0 45.77-32.12 77.88Q885.77-470 840-470q-30.08 0-55.04-14.62-24.96-14.61-39.42-38.84l-115.23 38.15q5.61 34-3.85 67.31t-34.38 60.69l79.3 98.08q11-5 23.39-7.88Q707.15-270 720-270q45.77 0 77.88 32.12Q830-205.77 830-160q0 45.77-32.12 77.88Q765.77-50 720-50q-45.77 0-77.88-32.12Q610-114.23 610-160q0-18.85 6.12-36.38 6.11-17.54 18.27-32.16L555.08-328q-34.08 20.31-75.2 20.31-41.11 0-75.57-20.31l-78.7 99.46q11.77 14.62 18.08 32.16Q350-178.85 350-160q0 45.77-32.12 77.88Q285.77-50 240-50q-45.77 0-77.88-32.12ZM120-530q20.85 0 35.42-14.58Q170-559.15 170-580t-14.58-35.42Q140.85-630 120-630t-35.42 14.58Q70-600.85 70-580t14.58 35.42Q99.15-530 120-530Zm155.42 405.42Q290-139.15 290-160t-14.58-35.42Q260.85-210 240-210t-35.42 14.58Q190-180.85 190-160t14.58 35.42Q219.15-110 240-110t35.42-14.58Zm240-680Q530-819.15 530-840t-14.58-35.42Q500.85-890 480-890t-35.42 14.58Q430-860.85 430-840t14.58 35.42Q459.15-790 480-790t35.42-14.58ZM480-367.69q38.54 0 65.42-26.89 26.89-26.88 26.89-65.42 0-38.54-26.89-65.42-26.88-26.89-65.42-26.89-38.54 0-65.42 26.89-26.89 26.88-26.89 65.42 0 38.54 26.89 65.42 26.88 26.89 65.42 26.89Zm275.42 243.11Q770-139.15 770-160t-14.58-35.42Q740.85-210 720-210t-35.42 14.58Q670-180.85 670-160t14.58 35.42Q699.15-110 720-110t35.42-14.58Zm120-420Q890-559.15 890-580t-14.58-35.42Q860.85-630 840-630t-35.42 14.58Q790-600.85 790-580t14.58 35.42Q819.15-530 840-530t35.42-14.58ZM480-840ZM120-580Zm360 120Zm360-120ZM240-160Zm480 0Z"/></svg>
+                                </div>
+                                <h4 class="text">Seamless Connectivity</h4>
+                                <p class="sub-text">Just 35 minutes from Mumbai via the Atal Setu trans-harbour sea link.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONFIGURATION -->
+        <section class="section-config-new" id="configuration">
+
+
+
+                <div class="section-heading">
+                    <h2 class="section-title text-center" data-aos="fade-up" data-aos-delay="60"
+                        data-aos-duration="1500" data-aos-easing="ease">
+                        CONFIGURATION
+                    </h2>
+                    <h4 class="section-subtitle text-center mt-2" data-aos="fade-up" data-aos-delay="60"
+                        data-aos-duration="1500" data-aos-easing="ease">
+                        Choose Your Dream Space Here
+                    </h4>
+                </div>
+            <!-- Configuration Swiper -->
+            <div class="container pb-4 mt-5">
+                <div class="swiper configuration-swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 — 505 sq.ft -->
+                        <div class="swiper-slide">
+                            <div class="config-slide-card">
+                                <div class="configurationbox">
+                                    <div class="imgwrapper text-center position-relative">
+                                        <img src="assets/images/conf/1.webp" class="img-fluid"
+                                            alt="Artist Impression (Use a luxurious 2 BHK interior/show flat render)">
+                                        <span class="artist_txt">Artist Impression (Use a luxurious 2 BHK interior/show flat render)</span>
+                                    </div>
+                                </div>
+                                <div class="configurationbox confcontbx">
+                                    <div
+                                        class="d-flex flex-column justify-content-center align-items-center col-11 mx-auto py-4">
+                                        <div class="conf-label-wrap mb-2"><span class="conf-label">Type 01</span></div>
+                                        <div class="headwrap">
+                                            <h4 class="conf-title conf-text-gradient">2 BHK Premium Residence</h4>
+                                        </div>
+                                        <div class="cnfwrap my-3">RERA Carpet Area — 592 to 605 sq. ft.</div>
+                                        <div class="priceing">Starting from ₹ 72 Lakhs + Taxes*</div>
+                                        <div class="text-center">
+                                            <button class="conf-round-btn" onclick="trackForm('Configuration Form')"
+                                                data-bs-toggle="modal" data-bs-target="#mainModalPopup"><span
+                                                    class="conf-round-btn-icon"><img src="assets/images/icons/msg.svg"
+                                                        loading="lazy" alt="enquire" /></span><span>Enquire
+                                                    Now</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 — 522 sq.ft -->
+                        <div class="swiper-slide">
+                            <div class="config-slide-card">
+                                <div class="configurationbox">
+                                    <div class="imgwrapper text-center position-relative">
+                                        <img src="assets/images/conf/2.webp" class="img-fluid"
+                                            alt="">
+                                        <span class="artist_txt">Artist Impression (Use a luxurious 3 BHK living room or master bedroom render)</span>
+                                    </div>
+                                </div>
+                                <div class="configurationbox confcontbx">
+                                    <div
+                                        class="d-flex flex-column justify-content-center align-items-center col-11 mx-auto py-4">
+                                        <div class="conf-label-wrap mb-2"><span class="conf-label">Type 02</span></div>
+                                        <div class="headwrap">
+                                            <h4 class="conf-title conf-text-gradient">3 BHK Elite Residence</h4>
+                                        </div>
+                                        <div class="cnfwrap my-3">RERA Carpet Area — 980 sq. ft.</div>
+                                        <div class="priceing">Price on Request</div>
+                                        <div class="text-center">
+                                            <button class="conf-round-btn" onclick="trackForm('Configuration Form')"
+                                                data-bs-toggle="modal" data-bs-target="#mainModalPopup"><span
+                                                    class="conf-round-btn-icon"><img src="assets/images/icons/msg.svg"
+                                                        loading="lazy" alt="enquire" /></span><span>Enquire
+                                                    Now</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Swiper pagination -->
+                    <div class="swiper-pagination config-swiper-pagination"></div>
+                    <!-- Swiper nav arrows -->
+                    <div class="config-swiper-nav">
+                        <button class="config-swiper-prev"><img src="assets/images/icons/prevbtn.svg"
+                                alt="prev"></button>
+                        <button class="config-swiper-next"><img src="assets/images/icons/nextbtn.svg"
+                                alt="next"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- AMENITIES -->
+        <section class="amenities-section" id="amenities">
+            <div class="amenities-section-inner">
+
+
+                <div class="section-heading">
+                    <h2 class="section-title text-center" data-aos="fade-up" data-aos-delay="60"
+                        data-aos-duration="1500" data-aos-easing="ease">
+                        Amenities
+                    </h2>
+                    <h4 class="section-subtitle text-center mt-2 mb-3" data-aos="fade-up" data-aos-delay="60"
+                        data-aos-duration="1500" data-aos-easing="ease">
+                        World-Class Facilities for Elevated Living
+                    </h4>
+                </div>
+
+                <div class="ame-cirle" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                    <div class="amenities-carousel-wrap">
+                        <div class="amenities-carousel owl-carousel">
+                            <div class="gall">
+                                <div class="amenity-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                                        <path d="M230-280v-300h60v300h-60Zm220 0v-300h60v300h-60ZM110.77-140v-60h738.46v60H110.77ZM670-280v-300h60v300h-60ZM110.77-660v-56.92L480-897.69l369.23 180.77V-660H110.77Zm141.84-60h454.78-454.78Zm0 0h454.78L480-830 252.61-720Z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="amenity-label">Grand Arrival & Lobby</h3>
+                                <p>A magnificent entrance and designer lobby that sets a tone of elite sophistication the moment you step in.</p>
+                            </div>
+
+                            <div class="gall">
+                                <div class="amenity-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M90-130.77v-60.77q34.54-1.92 53.35-20.19Q162.15-230 213.54-230q51.38 0 73.15 20 21.77 20 60.08 20t60.08-20q21.77-20 73.15-20 51.38 0 73.54 20 22.15 20 60.46 20t59.69-20q21.39-20 72.77-20 51.39 0 70.19 18.27 18.81 18.27 53.35 20.19v60.77q-47.46-2.31-67.12-20.77Q783.23-170 746.46-170t-58.15 20q-21.39 20-74.31 20t-75.08-20q-22.15-20-58.92-20t-58.54 20q-21.77 20-74.69 20t-74.69-20q-21.77-20-58.54-20-36.77 0-56.42 18.46-19.66 18.46-67.12 20.77Zm0-180v-60.77q34.54-1.92 53.35-20.19Q162.15-410 213.54-410q51.38 0 73.46 20 22.08 20 59.77 20 38.31 0 60.08-20 21.77-20 73.15-20 51.38 0 73.15 20 21.77 20 60.08 20t60.08-20q21.77-20 73.15-20 51.39 0 70.19 18.27 18.81 18.27 53.35 20.19v60.77q-47.46-2.31-67.12-20.77Q783.23-350 746.46-350t-57.23 20q-20.46 20-75.23 20-53.54 0-75.38-20-21.85-20-58.62-20-38 0-58.23 20-20.23 20-75 20-54.77 0-75.62-20-20.84-20-57.61-20-36.77 0-56.42 18.46-19.66 18.46-67.12 20.77Zm203.69-197.85 131.08-131.07L374-690.46q-32.61-32.62-67.69-46.66-35.08-14.03-87.54-15.19V-830q68.85 1.15 114 17.08 45.15 15.92 89.08 59.84l244.46 244.46q-12.39 8.7-24.54 13.66-12.16 4.96-28.15 4.96-31.39 0-54.89-20T480-530q-55.23 0-78.73 20-23.5 20-54.89 20-15.99 0-28.15-4.96-12.15-4.96-24.54-13.66Zm434.35-290.34q26.88 27.19 26.88 65.11 0 38.54-26.88 65.43-26.89 26.88-65.43 26.88-38.53 0-65.42-26.88-26.88-26.89-26.88-65.43 0-37.92 26.88-65.11 26.89-27.19 65.42-27.19 38.54 0 65.43 27.19Z"/></svg>
+                                </div>
+                                <h3 class="amenity-label">Lap Pool & Water Deck</h3>
+                                <p>Rejuvenate your daily routine with a pristine lap pool, kids' pool, and serene poolside relaxation decks.</p>
+                            </div>
+
+                            <div class="gall">
+                                <div class="amenity-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M110.77-190.77v-60h212.31Q303-329.23 246.12-386.12 189.23-443 110.77-463.08q18.46-4.61 36.42-6.92 17.97-2.31 37.43-2.31 123.61 0 209.5 78.96Q480-314.39 480-190.77H110.77Zm429.23 0q0-31.23-6.12-63.12-6.11-31.88-18.5-61.8 37.39-67.92 104.7-112.27 67.3-44.35 155.3-44.35 19.46 0 37.43 2.31 17.96 2.31 36.42 6.92-78.46 20.08-134.85 76.96-56.38 56.89-77.46 135.35h212.31v60H540Zm-55.38-182.84q-4.24-65 15.53-121.62 19.77-56.61 57.93-99.54 38.15-42.92 91.57-69.11 53.43-26.19 115.5-28.96-59.84 37.69-98 90.03-38.15 52.35-56.54 111.89-38.23 19.08-72.03 50.92-33.81 31.85-53.96 66.39Zm-56.46-65q-12.77-13.23-29-25.85-16.24-12.62-33.47-21.77 1.16-7.15 2.35-16.35 1.19-9.19 1.19-17.88 0-70.23-22.27-132.85-22.27-62.61-62.8-114.38 63.3 25.85 111.23 77.69 47.92 51.85 70.46 124-15.31 28.46-24.85 61.77-9.54 33.31-12.84 65.62Z"/></svg>
+                                </div>
+                                <h3 class="amenity-label">Podium Garden & Party Lawn</h3>
+                                <p>Expansive green landscapes, sculpture gardens, and open-air lawns designed for community celebrations.</p>
+                            </div>
+
+                            <div class="gall">
+                                <div class="amenity-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M307.69-140v-60H450v-137.08q-50.92-10.23-90-42.84-39.08-32.62-55.54-81.31-69.23-8.23-116.84-58.77Q140-570.54 140-640v-40q0-24.54 17.73-42.27Q175.46-740 200-740h93.08v-80h373.84v80H760q24.54 0 42.27 17.73Q820-704.54 820-680v40q0 69.46-47.62 120-47.61 50.54-116.84 58.77-16.46 48.69-55.54 81.31-39.08 32.61-90 42.84V-200h142.31v60H307.69Zm-14.61-385.69V-680H200v40q0 41.85 26.23 73.5t66.85 40.81Zm276.34 94.34q36.73-36.73 36.73-89.42V-760h-252.3v239.23q0 52.69 36.73 89.42 36.73 36.74 89.42 36.74 52.69 0 89.42-36.74Zm97.5-94.34q40.62-9.16 66.85-40.81Q760-598.15 760-640v-40h-93.08v154.31ZM480-577.31Z"/></svg>
+                                </div>
+                                <h3 class="amenity-label"> The Elite Clubhouse</h3>
+                                <p>Your exclusive hub for indoor games, social gatherings, business meetings, and leisure activities.</p>
+                            </div>
+
+                            <div class="gall">
+                                <div class="amenity-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m801-585-41.77-41.77 24.61-25.61q3.85-3.85 3.85-8.66 0-4.81-3.85-8.65L669.69-783.84q-3.84-3.85-8.65-3.85-4.81 0-8.66 3.85l-25.61 24.61L584-802l26.15-27.15q20.31-20.31 50.08-19.81t50.08 20.81l117.84 117.84q20.31 20.31 20.31 49.58t-20.31 49.58L801-585ZM349.85-132.85q-20.31 20.31-49.58 20.31t-49.58-20.31l-116.3-116.31q-20.7-20.69-20.7-51.11 0-30.42 20.7-51.12L159-376l42.77 42.77-25.23 24.61q-3.85 3.85-3.85 8.66 0 4.81 3.85 8.65l114.77 114.77q3.84 3.85 8.65 3.85 4.81 0 8.66-3.85l24.61-25.23L376-159l-26.15 26.15ZM743-436.92l51.23-51.23q3.85-3.85 3.85-8.85t-3.85-8.85L505.85-794.23q-3.85-3.85-8.85-3.85t-8.85 3.85L436.92-743q-3.84 3.85-3.84 8.65 0 4.81 3.84 8.66l288.77 288.77q3.85 3.84 8.66 3.84 4.8 0 8.65-3.84ZM471.85-165.77l51.23-51.85q3.84-3.84 3.84-8.65 0-4.81-3.84-8.65L234.92-523.08q-3.84-3.84-8.65-3.84-4.81 0-8.65 3.84l-51.85 51.23q-3.85 3.85-3.85 8.85t3.85 8.85l288.38 288.38q3.85 3.85 8.85 3.85t8.85-3.85Zm-17.16-222.46 117.7-117.08-67.08-67.08-117.08 117.7 66.46 66.46Zm59.54 264.61q-20.69 20.7-51.23 20.7-30.54 0-51.23-20.7L123.62-411.77q-20.7-20.69-20.7-51.23 0-30.54 20.7-51.23l51.23-51.62q20.69-20.69 51.11-20.69 30.43 0 51.12 20.69l68.38 68.39 117.7-117.69-68.39-67.77q-20.69-20.69-20.69-51.43 0-30.73 20.69-51.42l51.62-51.61q20.69-20.7 51.11-20.7 30.42 0 51.11 20.7l288.77 288.77q20.7 20.69 20.7 51.11 0 30.42-20.7 51.11l-51.61 51.62q-20.69 20.69-51.42 20.69-30.74 0-51.43-20.69l-67.77-68.39-117.69 117.7 68.39 68.38q20.69 20.69 20.69 51.12 0 30.42-20.69 51.11l-51.62 51.23Z"/></svg>
+                                </div>
+                                <h3 class="amenity-label">Fitness & Wellness Zone</h3>
+                                <p>State-of-the-art gymnasium, open-air fitness areas, and dedicated yoga lawns to keep you energized.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="section-gallery texture-pattern" id="gallery">
+            <div class="container-fluid">
+                <div class="section-heading">
+                    <h2 class="section-title text-center" data-aos="fade-up" data-aos-delay="60"
+                        data-aos-duration="1500" data-aos-easing="ease">
+                        Gallery
+                    </h2>
+                    <h4 class="section-subtitle text-center mt-2" data-aos="fade-up" data-aos-delay="60"
+                        data-aos-duration="1500" data-aos-easing="ease">
+                        A Glimpse of Mahaavir Labdhi
+                    </h4>
+                </div>
+
+                <!-- Gallery Tabs -->
+                <div class="gallery-tabs-wrap mt-4" data-aos="fade-up" data-aos-delay="80" data-aos-duration="1200">
+                    <ul class="nav gallery-nav-tabs justify-content-center mb-4" id="galleryTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="gallery-tab-btn active" id="interior-tab" data-bs-toggle="tab"
+                                data-bs-target="#interiorTabPane" type="button" role="tab"
+                                aria-controls="interiorTabPane" aria-selected="true">
+                                <span class="gal-tab-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                        <polyline points="9 22 9 12 15 12 15 22" />
+                                    </svg>
+                                </span>
+                                <span>Interior</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="gallery-tab-btn" id="elevation-tab" data-bs-toggle="tab"
+                                data-bs-target="#elevationTabPane" type="button" role="tab"
+                                aria-controls="elevationTabPane" aria-selected="false">
+                                <span class="gal-tab-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="2" width="16" height="20" rx="1" />
+                                        <path d="M9 22V2" />
+                                        <path d="M4 7h5" />
+                                        <path d="M4 11h5" />
+                                        <path d="M4 15h5" />
+                                        <path d="M4 19h5" />
+                                        <rect x="12" y="13" width="4" height="9" />
+                                        <path d="M15 7h1" />
+                                        <path d="M15 11h1" />
+                                    </svg>
+                                </span>
+                                <span>Exterior</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="gallery-tab-btn" id="floorplan-tab" data-bs-toggle="tab"
+                                data-bs-target="#floorplanTabPane" type="button" role="tab"
+                                aria-controls="floorplanTabPane" aria-selected="false">
+                                <span class="gal-tab-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="18" height="18" rx="1" />
+                                        <path d="M3 9h18" />
+                                        <path d="M3 15h18" />
+                                        <path d="M9 9v9" />
+                                        <path d="M15 9v9" />
+                                    </svg>
+                                </span>
+                                <span>Floor Plan</span>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="galleryTabContent">
+
+                        <!-- Exterior Tab -->
+                        <div class="tab-pane fade" id="elevationTabPane" role="tabpanel"
+                            aria-labelledby="elevation-tab">
+                            <div class="gal-carousel owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="gallery" class="w-100" href="assets/images/gallery/exterior/1.webp">
+                                            <img src="assets/images/gallery/exterior/1.webp"
+                                                alt="" />
+                                            <div class="img-overlay"></div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="gallery" class="w-100" href="assets/images/gallery/exterior/2.webp">
+                                            <img src="assets/images/gallery/exterior/2.webp"
+                                                alt="" />
+                                            <div class="img-overlay"></div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="gallery" class="w-100" href="assets/images/gallery/exterior/3.webp">
+                                            <img src="assets/images/gallery/exterior/3.webp"
+                                                alt="" />
+                                            <div class="img-overlay"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="gallery" class="w-100" href="assets/images/gallery/exterior/4.webp">
+                                            <img src="assets/images/gallery/exterior/4.webp"
+                                                alt="" />
+                                            <div class="img-overlay"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interior Tab -->
+                        <div class="tab-pane fade show active" id="interiorTabPane" role="tabpanel"
+                            aria-labelledby="interior-tab">
+                            <div class="gal-carousel owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/interior/1.webp">
+                                            <img src="assets/images/gallery/interior/1.webp"
+                                                alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floor Plan Tab -->
+                        <div class="tab-pane fade" id="floorplanTabPane" role="tabpanel"
+                            aria-labelledby="floorplan-tab">
+                            <div class="gal-carousel owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/floorplan/1.webp">
+                                            <img src="assets/images/gallery/floorplan/1.webp" alt="Floor Plan 1"
+                                            class="blurred" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/floorplan/2.webp">
+                                            <img src="assets/images/gallery/floorplan/2.webp" alt="Floor Plan 2"
+                                            class="blurred" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/floorplan/3.webp">
+                                            <img src="assets/images/gallery/floorplan/3.webp" alt="Floor Plan 3"
+                                            class="blurred" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/floorplan/4.webp">
+                                            <img src="assets/images/gallery/floorplan/4.webp" alt="Floor Plan 4"
+                                            class="blurred" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/floorplan/5.webp">
+                                            <img src="assets/images/gallery/floorplan/5.webp" alt="Floor Plan 5"
+                                            class="blurred" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/floorplan/6.webp">
+                                            <img src="assets/images/gallery/floorplan/6.webp" alt="Floor Plan 6"
+                                            class="blurred" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/floorplan/7.webp">
+                                            <img src="assets/images/gallery/floorplan/7.webp" alt="Floor Plan 7"
+                                            class="blurred" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="gal_image">
+                                        <a data-fancybox="interior" class="w-100"
+                                            href="assets/images/gallery/floorplan/8.webp">
+                                            <img src="assets/images/gallery/floorplan/8.webp" alt="Floor Plan 8"
+                                            class="blurred" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- LOCATION -->
+        <section class="section-location-new texture-pattern" id="location">
+            <div class="custom-container">
+                <div class="section-heading text-center" data-aos="fade-up" data-aos-delay="60"
+                    data-aos-duration="1500">
+                    <h2 class="section-title">Location Advantages</h2>
+                    <h4 class="section-subtitle mt-2">Well Connected to Everything That Matters</h4>
+                </div>
+
+                <div class="loc-content mt-5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                    <div class="row g-4 align-items-start">
+
+                        <!-- Accordion -->
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <div class="accordion loc-accordion" id="locationAccordion" data-aos="fade-right"
+                                data-aos-delay="100" data-aos-duration="1500">
+
+                                <!-- Connectivity -->
+                                <div class="accordion-item loc-acc-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button loc-acc-btn" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#accConnectivity"
+                                            aria-expanded="true" aria-controls="accConnectivity">
+                                            <span class="loc-acc-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z" />
+                                                    <line x1="8" y1="2" x2="8" y2="18" />
+                                                    <line x1="16" y1="6" x2="16" y2="22" />
+                                                </svg>
+                                            </span>
+                                            <span class="loc-acc-title">Connectivity</span>
+                                        </button>
+                                    </h3>
+                                    <div id="accConnectivity" class="accordion-collapse collapse show"
+                                        data-bs-parent="#locationAccordion">
+                                        <div class="accordion-body loc-acc-body">
+                                            <ul class="loc-acc-list">
+                                                <li>Uran Railway Station – 5 Mins</li>
+                                                <li>NMMT Bus Stop – 3 Mins</li>
+                                                <li>Atal Setu (Uran-Mumbai Trans Harbour Sea Link) – 35 Mins</li>
+                                                <li>Navi Mumbai International Airport – 20 Mins</li>
+                                                <li>JNPT Port – 20 Mins</li>
+                                                <li>Mora Jetty (Water Transport to Mumbai Gateway of India) – 10 Mins</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Nearby -->
+                                <div class="accordion-item loc-acc-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button loc-acc-btn collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#accNearby" aria-expanded="false"
+                                            aria-controls="accNearby">
+                                            <span class="loc-acc-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                                </svg>
+                                            </span>
+                                            <span class="loc-acc-title">Nearby</span>
+                                        </button>
+                                    </h3>
+                                    <div id="accNearby" class="accordion-collapse collapse"
+                                        data-bs-parent="#locationAccordion">
+                                        <div class="accordion-body loc-acc-body">
+                                            <ul class="loc-acc-list">
+                                                <li>Native Institutional NI High School – 1 Min</li>
+                                                <li>St. Mary's High School & Jr. College – 2 Mins</li>
+                                                <li>Local Markets & Daily Essentials – Walking Distance</li>
+                                                <li>Renowned Healthcare & Hospitals – Nearby</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Landmarks -->
+                                <div class="accordion-item loc-acc-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button loc-acc-btn collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#accLandmarks"
+                                            aria-expanded="false" aria-controls="accLandmarks">
+                                            <span class="loc-acc-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                                                </svg>
+                                            </span>
+                                            <span class="loc-acc-title">Landmarks & Leisure</span>
+                                        </button>
+                                    </h3>
+                                    <div id="accLandmarks" class="accordion-collapse collapse"
+                                        data-bs-parent="#locationAccordion">
+                                        <div class="accordion-body loc-acc-body">
+                                            <ul class="loc-acc-list">
+                                                <li>Uran Nagav Beach – 5 Mins</li>
+                                                <li>JNPT Multi-products SEZ – Close Proximity</li>
+                                                <li>Scenic Coastal Promenades – Minutes Away</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Business -->
+                                <div class="accordion-item loc-acc-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button loc-acc-btn collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#accBusiness"
+                                            aria-expanded="false" aria-controls="accBusiness">
+                                            <span class="loc-acc-icon">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                                </svg>
+                                            </span>
+                                            <span class="loc-acc-title">Business & Growth Hubs</span>
+                                        </button>
+                                    </h3>
+                                    <div id="accBusiness" class="accordion-collapse collapse"
+                                        data-bs-parent="#locationAccordion">
+                                        <div class="accordion-body loc-acc-body">
+                                            <ul class="loc-acc-list">
+                                                <li>JNPT Port & Maritime Business Corridor – 20 Mins</li>
+                                                <li>Upcoming Navi Mumbai Airport Economic Zone – 20 Mins</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <div class="loc-map-card">
+                                <a href="assets/images/map/map.webp" data-fancybox="map">
+                                    <img src="assets/images/map/map.webp" alt="" />
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US -->
+        <section class="section-about texture-pattern" id="about">
+            <div class="custom-container">
+                <div class="about-main-content">
+                    <div class="row g-5 align-items-center flex-column-reverse flex-md-row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 g-5 align-items-center">
+                            <div class="about-img" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1400">
+                                <img src="assets/images/about/2.webp" alt="" class="img-fluid" />
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12">
+                            <div class="overview-content">
+                                <div class="section-heading">
+                                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="60"
+                                        data-aos-duration="1500" data-aos-easing="ease">
+                                        About Us
+                                    </h2>
+                                    <h4 class="section-subtitle mt-2" data-aos="fade-up" data-aos-delay="60"
+                                        data-aos-duration="1500" data-aos-easing="ease">
+                                        Mahaavir Universal Homes
+                                    </h4>
+
+                                    <p class="section-desc mt-4 " data-aos="fade-up" data-aos-delay="60"
+                                        data-aos-duration="1500" data-aos-easing="ease">
+                                        We at Mahaavir Universal Homes Pvt. Ltd. ensure that quality standards are met every time. Our focus has always been on superior execution to deliver excellence at all times.
+                                    </p>
+
+                                    <p class="section-desc mt-4 " data-aos="fade-up" data-aos-delay="60"
+                                        data-aos-duration="1500" data-aos-easing="ease">
+                                        Guided by a commitment to superior product quality, transparent dealings, and timely delivery, the company has created trusted residential landmarks that stand the test of time. With every project, we strive to exceed customer expectations and build spaces that inspire long-term value, comfort, and pride.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="counter-section pt-5">
+                    <div class="row text-center justify-content-center text-md-start g-5">
+                        <div class="col-md-3 col-6">
+                            <div class="counter-box">
+                                <div class="top-line"></div>
+                                <h2 class="counter-number">
+                                    <span class="count" data-count="20">20</span>+
+                                </h2>
+                                <p class="counter-label">Years Of Legacy</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="counter-box">
+                                <div class="top-line"></div>
+                                <h2 class="counter-number">
+                                    <span class="count" data-count="13">13</span>+
+                                </h2>
+                                <p class="counter-label">Completed Projects</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="counter-box">
+                                <div class="top-line"></div>
+                                <h2 class="counter-number">
+                                    <span class="count" data-count="3000">3000</span>+
+                                </h2>
+                                <p class="counter-label">Happy Families</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="counter-box">
+                                <div class="top-line"></div>
+                                <h2 class="counter-number">
+                                    <span class="count" data-count="3">3</span> M+ sqft
+                                </h2>
+                                <p class="counter-label">Area Developed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONNECT WITH US -->
+        <section class="section-connect" id="contact">
+            <div class="custom-container">
+                <div class="row g-5 align-items-stretch">
+
+                    <!-- Left: Google Map -->
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="contact-map" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1400">
+                            <div class="box-content">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4566.63834823402!2d72.936011!3d18.8773728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7dbca12d753ab%3A0x1ae2b1bed2d5f32d!2sMahaavir%20Labdhi!5e1!3m2!1sen!2sin!4v1790055500565!5m2!1sen!2sin" 
+                                    width="100%" style="border:0; border-radius:14px;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title=""></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="fixed-button">
+            <button class="btnPrimary custom-size gold" onclick="trackForm('Enquire Form')" data-bs-toggle="modal"
+                data-bs-target="#mainModalPopup">
+                <span class="icon">
+                    <img src="assets/images/icons/msg.svg" loading="lazy" alt="enquire" />
+                </span>
+                <span class="txt">Enquire Now</span>
+            </button>
+
+            <button class="btnPrimary btn-brochure custom-size" onclick="trackForm('Brochure Form')"
+                data-bs-toggle="modal" data-bs-target="#mainModalPopup">
+                <span class="icon">
+                    <img src="assets/images/icons/download.svg" loading="lazy" alt="brochure" />
+                </span>
+                <span class="txt">Brochure</span>
+            </button>
+        </div> -->
+
+        <!-- main modal form popup -->
+        <div class="modal fade" id="thankyouModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="mainModalPopupLabel" aria-hidden="false">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content custom-modal-content">
+                    <div class="modal-body">
+                        <div class="modal-form">
+                            <div class="success-card">
+                                <div class="success-icon">✓</div>
+                                <div class="success-title">Form submitted successfully!</div>
+                                <div class="success-text">
+                                    Thank you for reaching out to us.<br>
+                                    We'll review your submission and get back to you soon.
+                                </div>
+                                <button class="btn-ov-brochure" data-bs-dismiss="modal" aria-label="Close">
+                                Done
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="pt-5">
+    <div class="container">
+        <p class="text-center mb-3" style="color: rgba(255,255,255,0.7);">
+            <strong style="color: var(--gold-light);">Project Address:</strong><br>
+            Mahaavir Labdhi, CTS No-420A, 420B, 420C, 420D and 403, Village - Mhatavali, Taluka - Uran, Dist. - Raigad, Maharashtra.
+        </p>
+
+        <p class="text-center mb-4" style="color: rgba(255,255,255,0.7);">
+            RERA Registration No.: <strong style="color: var(--gold-light);">P52000045246</strong>
+        </p>
+
+        <div class="footer-links text-center mb-3">
+            <!-- <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#disclaimerModal"
+                class="footer-link">Disclaimer</a>
+            <span class="footer-divider">|</span> -->
+            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#privacyModal"
+                class="footer-link">Privacy Policy</a>
+        </div>
+
+        <div class="footer-social text-center mb-4">
+            <p class="footer-follow-text mb-3">Follow Us</p>
+            <div class="footer-social-icons">
+                <a href="" target="_blank" rel="noopener noreferrer" class="footer-social-icon footer-social-fb" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer" class="footer-social-icon footer-social-ig" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer" class="footer-social-icon footer-social-li" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer" class="footer-social-icon footer-social-yt" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="" target="_blank" rel="noopener noreferrer" class="footer-social-icon footer-social-pt" aria-label="Pinterest">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-copyright">
+            <p>All rights are reserved | Copyright © 2026 Mahaavir Labdhi</p>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- Privacy Policy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content legal-modal-content">
+            <div class="modal-header legal-modal-header">
+                <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                <button type="button" class="legal-modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body legal-modal-body">
+                <h4>PRIVACY POLICY & TERM OF USES</h4>
+
+                <p>We are a Real Estate Regulatory Authority (“RERA”) Registered Agent. We prioritize your privacy. Our concise Privacy Policy outlines the personal information we collect through our website, including sub-domains and microsites, the purposes of collection we may share it with, and security measures in place. It also informs you about your rights, choices, and how to contact us regarding privacy concerns. We highly recommend reading this Privacy Policy before using services and/or providing personal information.INTERPRETATIONS AND DEFINITIONS“Data” shall mean personal information, including sensitive personal information and special category personal data (as defined under Data Protection Laws) about you, which we collect, receive, or otherwise process in connection with your use of our website and/or the Platform.“Data Protection Laws” shall mean any applicable law for the time being in force relating to the processing of Data.“Service Providers” includes entities which provide services to and to whom we may disclose your Data for a specific purpose pursuant to a written contract.“User or You” shall mean the natural person who accesses our website/pages or Platform.</p>
+
+                <h4>WEBSITE CONTENT OVERVIEW:</h4>
+
+                <p>The contents of this landing page, containing details of properties, property photos, costs, and availability, are provided for informational and illustrative purposes only. This information is subject to change at any time. Users are hereby advised that the actual properties may differ from what is shown in photos and cost on the website and pages, and as such, no claims shall be entertained based on such representations.</p>
+            </div>
+        </div>
+    </div>
+</div>    <!-- footer -->
+
+    <!-- bootstrap js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- FancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script>
+    // FancyBox ships a global "hash" module that opens a lightbox whenever the
+    // url hash matches a data-fancybox group name - it would grab our
+    // /#gallery section link and rewrite it to #gallery-1. The module bails out
+    // on this flag, but only reads it on DOM ready, so it has to be set here
+    // rather than inside $(document).ready further down.
+    if (window.jQuery && jQuery.fancybox) {
+        jQuery.fancybox.defaults.hash = false;
+    }
+    </script>
+
+    <!-- <script src="js/count.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/url-tracking.js"></script>
+    <script src="js/custom-validate.js"></script>
+    <script src="js/form-loader.js"></script>
+    <script src="js/facebook-conversion.js"></script> -->
+
+    <script src="js/AOS.js"></script>
+
+    <!-- gsap all plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="js/GSAP.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        Delete_Cookie("formfilled");
+        localStorage.clear();
+    });
+    </script>
+
+    <script>
+    function openFloorplanModal() {
+        trackForm('Floor Plan Form');
+    }
+    </script>
+
+    <script>
+    function toggleOverviewReadMore() {
+        var more = document.getElementById("overviewDescMore");
+        var btn = document.getElementById("overviewReadMoreBtn");
+        if (!more) return;
+        if (more.classList.contains("expanded")) {
+            more.classList.remove("expanded");
+            btn.textContent = "Read More";
+        } else {
+            more.classList.add("expanded");
+            btn.textContent = "Read Less";
+        }
+    }
+    </script>
+
+    <script>
+    $(document).ready(function() {
+        $(".offcanvas-link").click(function() {
+            $(".offcanvas-end").offcanvas("hide");
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("v") === "2") {
+            const selectFields = `
+                <div class="col-md-12">
+                    <select class="form-select custom-input" name="select_option_1" value="" required>
+                      <option selected hidden value="">Select Interest</option>
+                      <option value="Retail Space">Retail Space</option>
+                      <option value="Office Space">Office Space</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid option.
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <select name="select_option_2" class="form-select custom-input" value="" required>
+                        <option selected hidden value="">Schedule Site Visit</option>
+                        <option value="This week">This week</option>
+                        <option value="Next week">Next week</option>
+                        <option value="This month">This month</option>
+                    </select>
+                     <div class="invalid-feedback">
+                      Please select a valid value.
+                    </div>
+                </div>
+              `;
+
+            $(".add-select-input")
+                .closest(".after-this-select")
+                .after(selectFields);
+        }
+
+        new Swiper(".configuration-swiper", {
+            slidesPerView: 1,
+            loop: true,
+            spaceBetween: 24,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            speed: 1500,
+            navigation: {
+                nextEl: ".config-swiper-next",
+                prevEl: ".config-swiper-prev",
+            },
+            pagination: {
+                el: ".config-swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                992: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                }
+            }
+        });
+
+        $(".amenities-carousel").owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            smartSpeed: 700,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            dots: true,
+            nav: true,
+            navText: [
+                '<img src="assets/images/icons/prevbtn.svg" alt="prev">',
+                '<img src="assets/images/icons/nextbtn.svg" alt="next">'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 16
+                },
+                768: {
+                    items: 3,
+                    margin: 20
+                },
+                992: {
+                    items: 4,
+                    margin: 20
+                },
+                1200: {
+                    items: 5,
+                    margin: 20
+                },
+            },
+        });
+
+        $(".gal-carousel").owlCarousel({
+            items: 2.3,
+            loop: true,
+            margin: 0,
+            autoplay: false,
+            smartSpeed: 2000,
+            autoplayTimeout: 6000,
+            nav: true,
+            center: true,
+            dots: false,
+            navText: [
+                '<img src="assets/images/icons/prevbtn.svg" alt="prev">',
+                '<img src="assets/images/icons/nextbtn.svg" alt="next">',
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                767: {
+                    items: 2,
+                },
+                992: {
+                    items: 2.3,
+                },
+            },
+        });
+
+        // Retail mobile swiper
+        new Swiper(".retail-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".retail-pagination",
+                clickable: true,
+            },
+        });
+
+        // Offices mobile swiper
+        new Swiper(".offices-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".offices-pagination",
+                clickable: true,
+            },
+        });
+
+        // Highlights carousel
+        $(".highlights-carousel").owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            smartSpeed: 700,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            dots: true,
+            nav: true,
+            navText: [
+                '<img src="assets/images/icons/prevbtn.svg" alt="prev">',
+                '<img src="assets/images/icons/nextbtn.svg" alt="next">'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 16
+                },
+                576: {
+                    items: 1,
+                    margin: 20
+                },
+                991: {
+                    items: 2,
+                    margin: 30
+                },
+                1200: {
+                    items: 3,
+                    margin: 30
+                },
+            },
+        });
+
+        // Initialize FancyBox (url hash integration is switched off above)
+        $("[data-fancybox]").fancybox({});
+
+        // Auto popup after 7 seconds
+        setTimeout(function() {
+            var mainModal = document.getElementById('mainModalPopup');
+            var isMainOpen = mainModal && mainModal.classList.contains('show');
+            if (!isMainOpen) {
+                var autoPopup = new bootstrap.Modal(document.getElementById('autoPopupModal'));
+                autoPopup.show();
+            }
+        }, 7000);
+    });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var thankyouModal = new bootstrap.Modal(document.getElementById('thankyouModal'));
+            thankyouModal.show();
+        });
+    </script>
+</body>
+
+</html>
